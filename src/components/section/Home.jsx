@@ -2,7 +2,7 @@ import Navbar from "../NavBar";
 
 export default function Home() {
   return (
-    <section className="w-full min-h-screen bg-gradient-to-b from-black via-blue-950 to-black relative overflow-hidden text-gray-300">
+    <section className="w-full min-h-screen items-center justify-center bg-gradient-to-b from-black via-blue-950 to-black relative overflow-hidden text-gray-300">
       <Navbar />
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 md:px-12 pt-24">
         {/* Left: Text */}

@@ -7,7 +7,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 md:px-12 pt-24">
         {/* Left: Text */}
         <div>
-          <h1 className="text-5xl font-bold mb-4">Hi! I'm Kirthi Shetty</h1>
+          <h1 className="text-5xl font-bold mb-4">I'm Kirthi Shetty</h1>
           <p className="text-2xl mb-4 text-gray-300">
             Software Techie | AI/ML Enthusiast
           </p>

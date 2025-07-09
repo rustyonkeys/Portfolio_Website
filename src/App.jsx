@@ -3,8 +3,8 @@ import Home from './components/section/Home';
 import LampHero from './components/section/Hero';
 import Projects from './components/section/Project';
 import Skills from './components/section/Skills';
+import Certifications from './components/section/Certification';
 
-import CertificationsPage from './components/section/TiltCard';
 
 function App() { 
   return (
@@ -13,7 +13,7 @@ function App() {
     <Home />
     <Skills />
     <Projects />
-    <CertificationsPage />
+    <Certifications />
     </>
     
   )

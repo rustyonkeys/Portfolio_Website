@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav
       ref={ref}
-      className={`w-fit mx-auto py-4 px-8 rounded-full border border-white mb-36 mt-8 transition-all duration-1000
+      className={`w-fit mx-auto py-4 px-8 rounded-full border border-white mb-28 mt-8 transition-all duration-1000
         ${inView ? 'animate-switchOn' : 'opacity-0'} bg-black`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">

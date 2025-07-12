@@ -14,6 +14,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="hidden md:flex items-center space-x-8">
+          <a href="#home" className="text-gray-300 font-bold">Kirthi Shetty</a>
           <a href="#home" className="text-gray-300 hover:text-white">Home</a>
           <a href="#projects" className="text-gray-300 hover:text-white">Skills</a>
           <a href="#contact" className="text-gray-300 hover:text-white">Projects</a>
@@ -30,7 +31,7 @@ export default function Navbar() {
 //   return (
 //     <nav className="w-fit mx-auto mt-8 px-8 py-4 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-md">
 //       <div className="flex items-center space-x-8">
-//         <a href="#home" className="text-white font-bold">Kirthi Shetty</a>
+//         <a href="#home" className="text-black font-bold">Kirthi Shetty</a>
 //         <a href="#projects" className="text-gray-300 hover:text-white">Projects</a>
 //         <a href="#contact" className="text-gray-300 hover:text-white">Contact</a>
 //       </div>

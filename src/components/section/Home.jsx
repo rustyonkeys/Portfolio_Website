@@ -1,17 +1,20 @@
 import Navbar from "../NavBar";
 
+
 export default function Home() {
   return (
-    <section className="w-full min-h-screen items-center justify-center bg-gradient-to-b from-black via-blue-950 to-black relative overflow-hidden text-gray-300">
+    <section className="w-full min-h-screen items-center justify-center bg-[#FFF5F5] relative overflow-hidden text-black-300 border-b-2 border-black">
       <Navbar />
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 md:px-12 pt-24">
         {/* Left: Text */}
         <div>
-          <h1 className="text-5xl font-bold mb-4">I'm Kirthi Shetty</h1>
-          <p className="text-2xl mb-4 text-gray-300">
+          <h1 className="text-5xl font-bold mb-4">I&apos;m 
+            <span className="text-orange-500"> Kirthi Shetty</span>
+          </h1>
+          <p className="text-2xl mb-4 text-black-300">
             Software Techie | AI/ML Enthusiast
           </p>
-          <p className="text-lg text-gray-400 mb-6 leading-relaxed">
+          <p className="text-lg text-black mb-6 leading-relaxed">
             I'm a 4th year B-Tech student at Pillai College of Engineering, Mumbai,
             specializing in IT Engineering. I have a passion for software development
             and a keen interest in AI/ML technologies. I love to explore new tech and
@@ -24,6 +27,7 @@ export default function Home() {
             My Resume
           </a>
         </div>
+      
 
         {/* Right: Image */}
         <div className="flex justify-center md:justify-end">
@@ -34,6 +38,8 @@ export default function Home() {
           />
         </div>
       </div>
+
+       
     </section>
   );
 }

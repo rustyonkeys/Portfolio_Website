@@ -1,7 +1,7 @@
 import { useInView } from 'react-intersection-observer';
 
-export default function BottomNavBar() {
-  const { ref, inView } = useInView({
+export default function BottomNavBar({ topics = [], selectedTopic, setSelectedTopic, inView }) {
+  const { ref } = useInView({
     threshold: 0.1,
     triggerOnce: false,
   });
@@ -14,16 +14,23 @@ export default function BottomNavBar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="hidden md:flex items-center space-x-4">
-          {['AI', 'ML', 'Flutter', 'WebDev'].map((item, index) => (
-            <a
+          {topics.map((item, index) => (
+            <button
               key={index}
-              href={`#${item.toLowerCase()}`}
-              className="text-gray-300 px-4 py-2 rounded-md transition duration-300 
-                         hover:bg-white hover:bg-opacity-10 hover:text-white hover:shadow-sm"
+              onClick={() => setSelectedTopic(item)}
+              className={`text-gray-300 px-4 py-2 rounded-md transition duration-300 
+                hover:bg-white hover:bg-opacity-10 hover:text-white hover:shadow-sm font-jaro
+                ${selectedTopic === item ? "bg-white bg-opacity-10 text-white" : ""}`}
             >
               {item}
-            </a>
+            </button>
           ))}
+          <button
+            onClick={() => setSelectedTopic(null)}
+            className="text-gray-300 px-4 py-2 rounded-md transition duration-300 hover:bg-white hover:bg-opacity-10 hover:text-white hover:shadow-sm font-jaro"
+          >
+            All
+          </button>
         </div>
       </div>
     </nav>

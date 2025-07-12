@@ -2,8 +2,9 @@
 import Home from './components/section/Home';
 import LampHero from './components/section/Hero';
 import Projects from './components/section/Project';
-import Skills from './components/section/Skills';
 import Certifications from './components/section/Certification';
+import TechStack from './components/section/Techstack';
+
 
 
 function App() { 
@@ -11,8 +12,8 @@ function App() {
     <>
     <LampHero />
     <Home />
-    <Skills />
     <Projects />
+    <TechStack />
     <Certifications />
     </>
     

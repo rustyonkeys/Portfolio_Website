@@ -30,11 +30,11 @@ const projects = [
 	// Add more projects as needed
 ];
 
-const topics = ["AI", "ML", "Flutter", "WebDev"];
+const topics = ["AI", "ML", "Web Development"];
 
 export default function Projects() {
 	const { ref, inView } = useInView({
-		threshold: 0.4, // Show nav when 20% of section is visible
+		threshold: 0.4,
 	});
 	const [selectedTopic, setSelectedTopic] = useState(null);
 
@@ -56,15 +56,15 @@ export default function Projects() {
 				{filteredProjects.map((project, idx) => (
 					<div
 						key={idx}
-						className="bg-gray-100 rounded-2xl shadow-md flex flex-col md:flex-row items-center md:items-stretch p-6 md:p-10"
+						className="bg-gray-100 rounded-2xl shadow-md flex flex-col md:flex-row items-center md:items-stretch p-8 md:p-16 min-h-[70vh] md:min-h-[80vh] w-full"
 					>
 						{/* Left: Description */}
-						<div className="flex-1 flex flex-col justify-between md:pr-8">
+						<div className="flex-1 flex flex-col justify-between md:pr-12">
 							<div>
-								<h2 className="text-3xl font-jaro font-bold text-gray-800 mb-4">
+								<h2 className="text-5xl font-bebas font-bold text-black-400 mb-6">
 									{project.title}
 								</h2>
-								<p className="text-lg text-gray-600 mb-6">
+								<p className="text-2xl font-istok text-black-600 mb-8">
 									{project.description}
 								</p>
 							</div>
@@ -72,17 +72,18 @@ export default function Projects() {
 								href={project.link}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="mt-auto inline-block px-6 py-2 bg-red-500 text-white rounded-lg font-semibold hover:bg-red-600 transition-colors"
+								className="mt-auto inline-block text-red-500 font-semibold transition-colors text-lg flex items-center gap-2 hover:text-red-700"
 							>
-								View Project
+								View Project{" "}
+								<span className="text-red-500">&#8594;</span>
 							</a>
 						</div>
 						{/* Right: Image */}
-						<div className="flex-shrink-0 w-full md:w-80 flex justify-center items-center mt-8 md:mt-0">
+						<div className="flex-shrink-0 w-full md:w-[40vw] flex justify-center items-center mt-8 md:mt-0">
 							<img
 								src={project.image}
 								alt={project.title}
-								className="rounded-xl shadow-lg object-cover w-full h-56 md:h-64 bg-gray-200"
+								className="rounded-xl shadow-lg object-cover w-full h-[350px] md:h-[500px] bg-gray-200 transition-transform duration-300 hover:scale-105"
 							/>
 						</div>
 					</div>

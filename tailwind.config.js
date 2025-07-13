@@ -9,6 +9,8 @@ export default {
       fontFamily: {
         jaro: ["Jaro", "sans-serif"],
         lato: ["Lato", "sans-serif"],
+        bebas: ["BebasNeue", "sans-serif"],
+        istokweb: ["Istok Web", "sans-serif"],
       },
       keyframes: {
         switchOn: {

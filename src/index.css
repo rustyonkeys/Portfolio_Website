@@ -23,3 +23,18 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('/assets/fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IstokWeb';
+  src: url('/assets/fonts/IstokWeb-Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+

@@ -1,4 +1,4 @@
-import Navbar from "../NavBar";
+import Navbar from "../FloatingDockDemo.jsx";
 import CertificationMarquee from "../ui/CertificationMarquee.jsx";
 
 

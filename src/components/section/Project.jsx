@@ -30,11 +30,11 @@ const projects = [
 	// Add more projects as needed
 ];
 
-const topics = ["AI", "ML", "Web Development"];
+const topics = ["AI", "ML", "Flutter", "WebDev"];
 
 export default function Projects() {
 	const { ref, inView } = useInView({
-		threshold: 0.4,
+		threshold: 0.3,
 	});
 	const [selectedTopic, setSelectedTopic] = useState(null);
 
@@ -56,7 +56,7 @@ export default function Projects() {
 				{filteredProjects.map((project, idx) => (
 					<div
 						key={idx}
-						className="bg-gray-100 rounded-2xl shadow-md flex flex-col md:flex-row items-center md:items-stretch p-8 md:p-16 min-h-[70vh] md:min-h-[80vh] w-full"
+						className="bg-gray-100 rounded-2xl shadow-md flex flex-col md:flex-row items-center md:items-stretch p-6 md:p-10"
 					>
 						{/* Left: Description */}
 						<div className="flex-1 flex flex-col justify-between md:pr-12">
@@ -64,7 +64,8 @@ export default function Projects() {
 								<h2 className="text-5xl font-bebas font-bold text-black-400 mb-6">
 									{project.title}
 								</h2>
-								<p className="text-2xl font-istok text-black-600 mb-8">
+								<p className="text-2xl font-istok text-black
+								-600 mb-8">
 									{project.description}
 								</p>
 							</div>

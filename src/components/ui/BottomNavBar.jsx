@@ -1,19 +1,14 @@
 import { useInView } from 'react-intersection-observer';
 
 export default function BottomNavBar({ topics = [], selectedTopic, setSelectedTopic, inView }) {
-  const { ref } = useInView({
-    threshold: 0.1,
-    triggerOnce: false,
-  });
-
   return (
     <nav
-      ref={ref}
-      className={`w-fit mx-auto mb-36 py-4 px-8 rounded-full border border-white bg-black transition-all duration-1000
-        ${inView ? 'animate-switchOn' : 'opacity-0'}`}
+      className={`w-fit mx-auto mb-12 py-4 px-8 rounded-full border border-white bg-black transition-all duration-500
+        ${inView ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+      style={{ zIndex: 50 }}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="flex items-center space-x-4">
           {topics.map((item, index) => (
             <button
               key={index}
@@ -27,7 +22,8 @@ export default function BottomNavBar({ topics = [], selectedTopic, setSelectedTo
           ))}
           <button
             onClick={() => setSelectedTopic(null)}
-            className="text-gray-300 px-4 py-2 rounded-md transition duration-300 hover:bg-white hover:bg-opacity-10 hover:text-white hover:shadow-sm font-jaro"
+            className={`text-gray-300 px-4 py-2 rounded-md transition duration-300 hover:bg-white hover:bg-opacity-10 hover:text-white hover:shadow-sm font-jaro
+              ${selectedTopic === null ? "bg-white bg-opacity-10 text-white" : ""}`}
           >
             All
           </button>

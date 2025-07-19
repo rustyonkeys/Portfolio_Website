@@ -48,7 +48,7 @@ export default function Projects() {
 			id="projects"
 			className="w-full min-h-screen flex flex-col justify-between bg-white px-6 py-12"
 		>
-			<h1 className="text-7xl font-bold text-red-500 font-jaro mb-12">
+			<h1 className="text-7xl font-bold text-red-500 font-jaro mb-12 flex items-center">
 				Projects
 			</h1>
 

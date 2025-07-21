@@ -21,7 +21,7 @@ export default function Home() {
               </p>
               <a 
               href="#contact"
-              className="mt-2 px-4 py-2 bg-[#f59e0b] text-black font-semibold rounded-full text-sm hover:bg-yellow-400 transition-all">
+              className="mt-2 px-4 py-2 bg-[#f59e0b] text-black font-semibold rounded-full text-sm hover:bg-yellow-400 hover:scale-90 transition-all">
                 Contact Me
                 </a>
             </div>
@@ -47,7 +47,7 @@ export default function Home() {
 
             <div className="flex gap-4 h-[7rem]">
               {/* LinkedIn */}
-              <div className="flex-1 bg-[#2a2a2a] shadow-[0_4px_20px_rgba(59,130,246,0.5)] hover:shadow-[0_6px_25px_rgba(59,130,246,0.6)] transition-shadow duration-300 rounded-2xl flex items-center justify-center hover:bg-[#3b3b3b] hover:scale-[1.03] transition-all">
+              <div className="flex-1 bg-[#2a2a2a] shadow-[0_4px_20px_rgba(59,130,246,0.5)] hover:shadow-[0_6px_25px_rgba(59,130,246,0.6)] transition-shadow duration-300 rounded-2xl flex items-center justify-center hover:bg-[#3b3b3b] hover:scale-90 transition-all">
                 <a
                   href="https://www.linkedin.com/in/kirthishetty/"
                   className="text-white font-semibold tracking-wide flex items-center justify-center gap-3 h-full px-4"
@@ -55,14 +55,14 @@ export default function Home() {
                   <img
                     src="/linkedin-blue-logo-icon.png"
                     alt="LinkedIn"
-                    className="h-6 w-6"
+                    className="h-6 w-6 hover:brightness-125 transition-all"
                   />
                   <span>LinkedIn</span>
                 </a>
               </div>
 
               {/* GitHub */}
-              <div className="flex-1 bg-[#2a2a2a] shadow-[0_4px_20px_rgba(0,0,0,0.4)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.6)] transition-shadow duration-300 rounded-2xl flex items-center justify-center hover:bg-[#3b3b3b] hover:scale-[1.03] transition-all">
+              <div className="flex-1 bg-[#2a2a2a] shadow-[0_4px_20px_rgba(0,0,0,0.4)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.6)] transition-shadow duration-300 rounded-2xl flex items-center justify-center hover:bg-[#3b3b3b] hover:scale-90 transition-all">
                 <a
                   href="https://github.com/rustyonkeys"
                   className="text-white font-semibold tracking-wide flex items-center justify-center gap-3 h-full px-4"
@@ -70,7 +70,7 @@ export default function Home() {
                   <img
                     src="/github-logo.png"
                     alt="GitHub"
-                    className="h-6 w-6"
+                    className="h-6 w-6 hover:brightness-125 transition-all"
                   />
                   <span>GitHub</span>
                 </a>
@@ -105,7 +105,7 @@ export default function Home() {
             </div>
 
             {/* Resume Button */}
-            <div className="bg-[#1a1a1a] rounded-2xl shadow-[0_0_20px_#FFFF00] hover:bg-[#3b3b3b] transition-colors h-[5rem] w-[12rem] flex items-center justify-center">
+            <div className="bg-[#1a1a1a] rounded-2xl hover:scale-90 transition-colors h-[5rem] w-[12rem] flex items-center justify-center">
               <a
                 href="#resume"
                 className="text-white font-bold tracking-wide text-center"

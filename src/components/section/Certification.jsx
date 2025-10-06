@@ -19,7 +19,9 @@ export default function Certifications() {
   ];
 
   return (
-    <section className="w-full min-h-screen bg-[#f0f0f0] dark:bg-[#121212] text-black dark:text-white flex items-center justify-center px-4 py-12">
+    <section
+			id="certifications"
+     className="w-full min-h-screen bg-[#f0f0f0] dark:bg-[#121212] text-black dark:text-white flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-6xl">
         <h2 className="text-3xl font-bold text-center mb-10">Certifications</h2>
 

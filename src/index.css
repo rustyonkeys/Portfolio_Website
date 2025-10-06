@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: 'Jaro';
   src: url('/assets/fonts/Jaro-Regular.ttf') format('truetype');

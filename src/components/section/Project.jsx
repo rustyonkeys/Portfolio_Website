@@ -7,17 +7,42 @@ const projects = [
 		title: "AI Chatbot",
 		topic: "AI",
 		description:
-			"A conversational AI chatbot built using React and OpenAI API. It can answer user queries and learn from interactions.",
-		image: "/images/project-chatbot.png",
-		link: "https://github.com/yourusername/ai-chatbot",
+			"This is a simple yet powerful AI chatbot built using LangChain and Ollama that utilizes LLaMA 3 to provide intelligent responses while maintaining conversation history. The chatbot runs fully offline, making it efficient and private.",
+		image: "src/images/aibot.svg",
+		link: "https://github.com/rustyonkeys/Chat-Bot",
 	},
 	{
-		title: "ML Predictor",
+		title: "Movie Recommendation System",
 		topic: "ML",
 		description:
-			"A machine learning predictor app that uses historical data to predict future outcomes. Built with Python and Flask.",
+			"",
 		image: "/images/project-ml-predictor.png",
-		link: "https://github.com/yourusername/ml-predictor",
+		link: "https://github.com/rustyonkeys/Movie_Recommendation_model",
+	},
+	{
+		title: "Customer Churn Prediction",
+		topic: "ML",
+		description:
+			"",
+		image: "/images/project-ml-predictor.png",
+		link: "https://github.com/rustyonkeys/Churn-Analysis",
+	},
+	{
+		title: "Hindi Text Summarization using NLP",
+		topic: "NLP",
+		description:
+			"",
+		image: "/images/project-ml-predictor.png",
+		link: "https://github.com/rustyonkeys/Hindi_Text_summarization_using_NLP",
+	},
+	
+	{
+		title: "Project Manager",
+		topic: "Flutter",
+		description:
+			"",
+		image: "/images/project-ml-predictor.png",
+		link: "https://github.com/rustyonkeys/Movie_Recommendation_model",
 	},
 	{
 		title: "Portfolio Website",
@@ -27,10 +52,11 @@ const projects = [
 		image: "/images/project-portfolio.png",
 		link: "https://github.com/yourusername/portfolio",
 	},
+	
 	// Add more projects as needed
 ];
 
-const topics = ["AI", "ML", "Flutter", "WebDev"];
+const topics = ["AI", "ML", "NLP","Flutter", "WebDev"];
 
 export default function Projects() {
 	const { ref, inView } = useInView({
@@ -80,11 +106,16 @@ export default function Projects() {
 						</div>
 						{/* Right: Image */}
 						<div className="flex-shrink-0 w-full md:w-[40vw] flex justify-center items-center mt-8 md:mt-0">
-							<img
-								src={project.image}
-								alt={project.title}
-								className="rounded-xl shadow-lg object-cover w-full h-[300px] md:h-[400px] bg-gray-100 transition-transform duration-300 hover:scale-105 hover:shadow-[0_12px_48px_rgba(60,60,60,0.22)]"
-							/>
+							<div className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center">
+								<img
+									src={project.image}
+									alt={project.title}
+									className="rounded-2xl object-cover w-full h-full bg-gray-100 border-2 border-gray-200 shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-[0_16px_56px_rgba(60,60,60,0.25)]"
+									style={{ boxShadow: "0 8px 40px rgba(60,60,60,0.22)" }}
+								/>
+								{/* Optional: subtle overlay for a modern look */}
+								<div className="absolute inset-0 rounded-2xl pointer-events-none bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+							</div>
 						</div>
 					</div>
 				))}

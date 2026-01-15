@@ -1,11 +1,9 @@
-import { useInView } from 'react-intersection-observer';
-
 export default function BottomNavBar({ topics = [], selectedTopic, setSelectedTopic, inView }) {
   return (
     <nav
       className={`w-fit mx-auto mb-12 py-4 px-8 rounded-full border border-white bg-black transition-all duration-500
-        ${inView ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-      style={{ zIndex: 50 }}
+        ${inView ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}  // Adjust opacity based on inView
+      style={{ zIndex: 50 }}  // This keeps the nav on top
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center space-x-4">

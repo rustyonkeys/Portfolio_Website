@@ -5,6 +5,7 @@ import Projects from './components/section/Project';
 import Certifications from './components/section/Certification';
 import TechStack from './components/section/Techstack';
 import Experience from './components/section/Experience';
+import Contact from './components/section/Contact';
 
 
 
@@ -15,7 +16,7 @@ function App() {
     <Projects />
     <TechStack />
     <Certifications />
-    <Experience />
+    <Contact />
     </>
     
   )

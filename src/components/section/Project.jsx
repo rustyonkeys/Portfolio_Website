@@ -14,49 +14,73 @@ const projects = [
 	{
 		title: "Movie Recommendation System",
 		topic: "ML",
-		description:
-			"",
+		description: "",
 		image: "/images/project-ml-predictor.png",
 		link: "https://github.com/rustyonkeys/Movie_Recommendation_model",
 	},
 	{
+		title: "Loan Prediction Model",
+		topic: "ML",
+		description: "",
+		image: "/images/project-ml-predictor.png",
+		link: "https://github.com/rustyonkeys/Loan_Prediction.git",
+	},
+	{
 		title: "Customer Churn Prediction",
 		topic: "ML",
-		description:
-			"",
+		description: "",
 		image: "/images/project-ml-predictor.png",
 		link: "https://github.com/rustyonkeys/Churn-Analysis",
 	},
 	{
 		title: "Hindi Text Summarization using NLP",
 		topic: "NLP",
-		description:
-			"",
+		description: "",
 		image: "/images/project-ml-predictor.png",
 		link: "https://github.com/rustyonkeys/Hindi_Text_summarization_using_NLP",
 	},
-	
+	{
+		title: "Resume ATS Checker",
+		topic: "NLP",
+		description: "",
+		image: "/images/project-ml-predictor.png",
+		link: "https://github.com/rustyonkeys/Resume-ats-checker.git",
+	},
 	{
 		title: "Project Manager",
 		topic: "Flutter",
-		description:
-			"",
+		description: "",
 		image: "/images/project-ml-predictor.png",
-		link: "https://github.com/rustyonkeys/Movie_Recommendation_model",
+		link: "https://github.com/rustyonkeys/ProjectManager.git",
+	},
+
+	{
+		title: "TrackIt",
+		topic: "Flutter",
+		description: "",
+		image: "/images/project-ml-predictor.png",
+		link: "https://github.com/rustyonkeys/TrackIt.git",
 	},
 	{
 		title: "Portfolio Website",
-		topic: "Web Development",
+		topic: "WebDev",
 		description:
 			"A personal portfolio website showcasing my skills, projects, and certifications. Built with React and Tailwind CSS.",
 		image: "/images/project-portfolio.png",
 		link: "https://github.com/yourusername/portfolio",
 	},
-	
-	// Add more projects as needed
+
+	{
+		title: "Ecommerce Website",
+		topic: "WebDev",
+		description:
+			"A personal portfolio website showcasing my skills, projects, and certifications. Built with React and Tailwind CSS.",
+		image: "/images/project-portfolio.png",
+		link: "https://github.com/rustyonkeys/E-commerce.git",
+	},
 ];
 
-const topics = ["AI", "ML", "NLP","Flutter", "WebDev"];
+const topics = ["AI", "ML", "NLP", "Flutter", "WebDev"];
 
 export default function Projects() {
 	const { ref, inView } = useInView({
@@ -64,9 +88,11 @@ export default function Projects() {
 	});
 	const [selectedTopic, setSelectedTopic] = useState(null);
 
+	// Limit the number of displayed projects to 5 initially
+	const initialProjects = projects.slice(0, 5);
 	const filteredProjects = selectedTopic
 		? projects.filter((p) => p.topic === selectedTopic)
-		: projects;
+		: initialProjects;
 
 	return (
 		<section

@@ -35,13 +35,13 @@ const Contact = () => {
         serviceID,
         templateID,
         {
-            from_name: formData.name,
-            from_email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
         },
         publicKey
-    );
+      );
 
 
       if (response.status === 200) {
@@ -59,9 +59,9 @@ const Contact = () => {
   };
 
   return (
-    <section 
-    id = "contact"
-    className="min-h-screen bg-[#fdfcf7] flex flex-col">
+    <section
+      id="contact"
+      className="min-h-screen bg-[#fdfcf7] flex flex-col">
       {/* Navbar
       <header className="w-full max-w-6xl mx-auto flex justify-between items-center py-6 px-4 md:px-8 border-b border-gray-200">
         <h1 className="text-xl md:text-2xl font-bold text-gray-900">
@@ -78,11 +78,11 @@ const Contact = () => {
       {/* Main Content */}
       <div className="flex-grow flex items-center justify-center px-4 py-12 md:py-16">
         <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          
+
           {/* Left Side - Contact Info */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h2 className="text-5xl md:text-5xl font-bold font-jaro text-gray-900 mb-4">
                 Let's Talk
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed">
@@ -210,11 +210,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="w-full border-t border-gray-200 py-6 text-center text-gray-600 text-sm">
-        <p>© 2025 Kirthi Shetty. All rights reserved.</p>
-      </footer>
     </section>
   );
 };

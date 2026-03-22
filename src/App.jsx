@@ -16,6 +16,7 @@ function App() {
     <Projects />
     <TechStack />
     <Certifications />
+    <Experience />
     <Contact />
     </>
     

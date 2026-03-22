@@ -20,10 +20,10 @@ export default function Certifications() {
 
   return (
     <section
-			id="certifications"
-     className="w-full min-h-screen bg-[#f0f0f0] dark:bg-[#121212] text-black dark:text-white flex items-center justify-center px-4 py-12">
+      id="certifications"
+      className="w-full min-h-screen dark:bg-[#121212] text-black dark:text-white flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-6xl">
-        <h2 className="text-3xl font-bold text-center mb-10">Certifications</h2>
+        <h2 className="text-5xl font-bold text-center font-jaro mb-10">Certifications</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {certificates.map((cert, idx) => (

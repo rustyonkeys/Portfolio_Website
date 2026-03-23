@@ -1,6 +1,13 @@
 export default function Experience() {
   const experiences = [
     {
+      title: "Team Project: AtWork",
+      company: "Smart India Hackathon",
+      duration: "2024",
+      description: "Collaborated in a 6-member team to design a geolocation-based attendance tracking system with planned analytics dashboard integration.",
+      technologies: ["Java", "Firebase", "Google Maps API"]
+    },
+    {
       title: "Data Engineer Intern",
       company: "Hexaware Technologies",
       duration: "Dec 2025 - Feb 2026",
@@ -21,13 +28,7 @@ export default function Experience() {
       description: "Trained and deployed ML models for classification problems using Python and Flask.",
       technologies: ["Python", "Flask", "PostgreSQL"]
     },
-    {
-      title: "Team Project: AtWork",
-      company: "Smart India Hackathon",
-      duration: "2024",
-      description: "Collaborated in a 6-member team to design a geolocation-based attendance tracking system with planned analytics dashboard integration.",
-      technologies: ["Java", "Firebase", "Google Maps API"]
-    },
+
   ];
 
   const education = [

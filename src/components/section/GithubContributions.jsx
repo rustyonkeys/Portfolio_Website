@@ -1,17 +1,44 @@
-import React, { useState } from "react";
-import { GitHubCalendar } from "react-github-calendar";
+import React, { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 
+const GITHUB_USERNAME = "rustyonkeys";
+const CURRENT_YEAR = new Date().getFullYear();
+const YEARS = Array.from(
+  { length: CURRENT_YEAR - 2025 + 1 },
+  (_, i) => CURRENT_YEAR - i
+);
+
 export default function GithubContributions() {
+  const [imgKey, setImgKey] = useState(Date.now());
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
   const [selectedYear, setSelectedYear] = useState("last");
-  
-  // You can adjust these years based on when the GitHub account was created
-  const years = ["last", 2026, 2025, 2024, 2023, 2022];
+
+  // Force a fresh fetch by busting the browser cache
+  const handleRefresh = useCallback(() => {
+    setLoaded(false);
+    setError(false);
+    setImgKey(Date.now());
+  }, []);
+
+  const handleYearChange = useCallback((year) => {
+    setSelectedYear(year);
+    setLoaded(false);
+    setError(false);
+    setImgKey(Date.now());
+  }, []);
+
+  // Live SVG URL — year format: /year/username for specific years
+  const chartUrl =
+    selectedYear === "last"
+      ? `https://ghchart.rshah.org/${GITHUB_USERNAME}?_cb=${imgKey}`
+      : `https://ghchart.rshah.org/${selectedYear}/${GITHUB_USERNAME}?_cb=${imgKey}`;
 
   return (
     <section className="py-32 px-6 md:px-12 bg-[#F4F4F5] flex flex-col items-center justify-center font-sans text-black relative">
       <div className="max-w-6xl mx-auto w-full text-center flex flex-col items-center">
-        {/* Title & "Tacky" Description */}
+
+        {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -26,7 +53,7 @@ export default function GithubContributions() {
             My Digital Footprint.
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl font-medium leading-relaxed">
-            Fueling my passion one commit at a time. Here is the live heatmap of my late-night bug fixes, relentless problem-solving, and continuous learning over the past years.
+            Fueling my passion one commit at a time — a live view of every contribution I've made on GitHub.
           </p>
         </motion.div>
 
@@ -36,47 +63,121 @@ export default function GithubContributions() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="w-full bg-white border border-gray-200 shadow-sm rounded-[2.5rem] p-8 md:p-12 flex flex-col items-center justify-center overflow-hidden"
+          className="w-full bg-white border border-gray-200 shadow-sm rounded-[2.5rem] p-8 md:p-12"
         >
-          <div className="w-full flex md:flex-row flex-col-reverse gap-8 items-start justify-between">
-            
-            {/* Heatmap Area */}
-            <div className="flex-grow w-full overflow-x-auto pb-4 hide-scrollbar flex justify-center md:justify-start">
-              <GitHubCalendar
-                username="rustyonkeys"
-                year={selectedYear}
-                colorScheme="light"
-                blockSize={16}
-                blockMargin={5}
-                fontSize={14}
-                theme={{
-                  light: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
-                }}
-                style={{
-                  fontFamily: 'inherit',
-                  margin: '0 auto'
-                }}
-              />
+          {/* Year Filter Tabs */}
+          <div className="flex items-center border-b border-gray-100 mb-8 gap-8">
+            {["last", ...YEARS].map((year) => (
+              <button
+                key={year}
+                onClick={() => handleYearChange(year)}
+                className={`relative pb-3 text-sm font-semibold transition-colors duration-200 whitespace-nowrap ${
+                  selectedYear === year ? "text-black" : "text-gray-400 hover:text-gray-600"
+                }`}
+              >
+                {year === "last" ? "Last Year" : year}
+                {selectedYear === year && (
+                  <motion.div
+                    layoutId="yearTab"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-black"
+                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                  />
+                )}
+              </button>
+            ))}
+            <div className="ml-auto flex items-center gap-2 pb-3">
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest">Live</span>
             </div>
-
-            {/* Year Filter - Exact GitHub Position (Right Side Vertical) */}
-            <div className="flex md:flex-col gap-2 w-full md:w-32 flex-wrap md:flex-nowrap justify-center md:items-start pl-0 md:pl-4 border-b md:border-b-0 md:border-l border-gray-100 pb-6 md:pb-0 mb-4 md:mb-0">
-              {years.map((year) => (
-                <button
-                  key={year}
-                  onClick={() => setSelectedYear(year)}
-                  className={`w-auto md:w-full text-left px-4 py-2 text-sm md:text-sm font-semibold rounded-md transition-all duration-200 ${
-                    selectedYear === year
-                      ? "bg-[#0969da] text-white shadow-sm"
-                      : "bg-transparent text-gray-600 hover:bg-gray-100"
-                  }`}
-                >
-                  {year === "last" ? "Last Year" : year}
-                </button>
-              ))}
-            </div>
-
           </div>
+
+          {/* Top bar */}
+          <div className="flex items-center justify-end mb-6">
+            <button
+              onClick={handleRefresh}
+              className="flex items-center gap-2 text-xs font-bold text-gray-500 hover:text-black transition-colors border border-gray-200 hover:border-gray-400 px-4 py-2 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={loaded ? "" : "animate-spin"}
+              >
+                <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+                <path d="M21 3v5h-5" />
+                <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+                <path d="M8 16H3v5" />
+              </svg>
+              Refresh
+            </button>
+          </div>
+
+          {/* Chart */}
+          <div className="w-full overflow-x-auto flex items-center justify-center min-h-[140px]">
+            {error ? (
+              <div className="text-center py-8">
+                <p className="text-red-500 font-semibold text-sm mb-4">
+                  Could not load GitHub contributions. GitHub may be temporarily unavailable.
+                </p>
+                <button
+                  onClick={handleRefresh}
+                  className="px-5 py-2 bg-black text-white rounded-full text-sm font-bold hover:bg-gray-800 transition-colors"
+                >
+                  Try Again
+                </button>
+              </div>
+            ) : (
+              <>
+                {!loaded && (
+                  <div className="flex flex-col items-center gap-3 text-gray-400">
+                    <svg
+                      className="animate-spin"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+                    </svg>
+                    <span className="text-xs font-medium">Fetching live data from GitHub…</span>
+                  </div>
+                )}
+                <img
+                  key={imgKey}
+                  src={chartUrl}
+                  alt={`GitHub contribution graph for ${GITHUB_USERNAME}`}
+                  className={`w-full max-w-5xl transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0 absolute"}`}
+                  onLoad={() => setLoaded(true)}
+                  onError={() => { setLoaded(true); setError(true); }}
+                  style={{ minWidth: 600 }}
+                />
+              </>
+            )}
+          </div>
+
+          {/* Footer */}
+          {loaded && !error && (
+            <div className="mt-6 flex items-center justify-between text-xs text-gray-400 font-medium">
+              <span>github.com/<strong className="text-gray-600">{GITHUB_USERNAME}</strong></span>
+              <a
+                href={`https://github.com/${GITHUB_USERNAME}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 hover:text-black transition-colors"
+              >
+                View Profile →
+              </a>
+            </div>
+          )}
         </motion.div>
       </div>
     </section>

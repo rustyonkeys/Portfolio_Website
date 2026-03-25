@@ -28,7 +28,7 @@ export default function HeroSection() {
             <a href="https://github.com/rustyonkeys" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub className="text-lg hover:text-black transition" />
             </a>
-            <a href="https://www.hackerrank.com/" target="_blank" rel="noopener noreferrer" aria-label="HackerRank">
+            <a href="https://www.hackerrank.com/profile/KIRTHI_SHETTY" target="_blank" rel="noopener noreferrer" aria-label="HackerRank">
               <FaHackerrank className="text-lg hover:text-green-600 transition" />
             </a>
           </div>

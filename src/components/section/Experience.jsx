@@ -33,16 +33,10 @@ export default function Experience() {
 
   const education = [
     {
-      duration: "2021 - 2025",
+      duration: "2022 - 2026",
       degree: "B.Tech in Computer Science",
-      institution: "Your University Name",
-      description: "Focus on Artificial Intelligence, Data Science, and Software Engineering. Engaged in various technical clubs and hackathons.",
-    },
-    {
-      duration: "2019 - 2021",
-      degree: "Higher Secondary (Class XII)",
-      institution: "Your School Name",
-      description: "Graduated with a focus on Mathematics, Physics, and Computer Science."
+      institution: "Pillai College of Engineering and Technology, Panvel",
+      description: "Focus on ML, Natural Language Processing, Computer Vision, Data Science, and Software Engineering. Engaged in hackathons.",
     }
   ];
   // bg-[#0E0E10]
@@ -50,7 +44,7 @@ export default function Experience() {
     <section className="w-full min-h-screen bg-white text-black px-6 py-24 flex justify-center font-sans">
       <div className="max-w-6xl w-full">
         {/* Main Section Header */}
-        <h2 className="text-5xl font-jaro md:text-5xl font-bold mb-20 text-black text-center tracking-tight">
+        <h2 className="font-jaro text-5xl md:text-[5rem] font-bold mb-20 text-black text-center tracking-tight">
           My Experience
         </h2>
 

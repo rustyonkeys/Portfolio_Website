@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 export default function TechStack() {
   const techList = [
     "Python", "Flutter", "Dart", "sklearn", "ML",
-    "Data science", "numpy", "Pandas", "Firebase",
+    "Data science", "Numpy", "Pandas", "Firebase",
+    "Postgres", "Flask", "FastApi", "AI", "Github", "Git",
+    "Docker"
   ];
 
   // Duplicate techList for seamless loop

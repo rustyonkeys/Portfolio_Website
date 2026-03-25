@@ -46,9 +46,7 @@ export default function GithubContributions() {
           transition={{ duration: 0.6 }}
           className="mb-14 flex flex-col items-center"
         >
-          <div className="inline-block px-5 py-2 mb-6 rounded-full bg-white border border-gray-200 text-black text-xs font-bold tracking-widest uppercase shadow-sm">
-            Live GitHub Stats
-          </div>
+
           <h2 className="font-jaro text-5xl md:text-[5rem] font-semibold tracking-tighter text-black leading-[1.05] mb-6">
             My Digital Footprint.
           </h2>
@@ -71,9 +69,8 @@ export default function GithubContributions() {
               <button
                 key={year}
                 onClick={() => handleYearChange(year)}
-                className={`relative pb-3 text-sm font-semibold transition-colors duration-200 whitespace-nowrap ${
-                  selectedYear === year ? "text-black" : "text-gray-400 hover:text-gray-600"
-                }`}
+                className={`relative pb-3 text-sm font-semibold transition-colors duration-200 whitespace-nowrap ${selectedYear === year ? "text-black" : "text-gray-400 hover:text-gray-600"
+                  }`}
               >
                 {year === "last" ? "Last Year" : year}
                 {selectedYear === year && (

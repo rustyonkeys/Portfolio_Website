@@ -61,7 +61,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-[#fdfcf7] flex flex-col">
+      className="min-h-screen bg-white flex flex-col">
       {/* Navbar
       <header className="w-full max-w-6xl mx-auto flex justify-between items-center py-6 px-4 md:px-8 border-b border-gray-200">
         <h1 className="text-xl md:text-2xl font-bold text-gray-900">
@@ -76,16 +76,16 @@ const Contact = () => {
       </header> */}
 
       {/* Main Content */}
-      <div className="flex-grow flex items-center justify-center px-4 py-12 md:py-16">
+      <div className="flex-grow flex items-center justify-center px-4 py-12 md:py-16 bg-[#F4F4F5]">
         <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
           {/* Left Side - Contact Info */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-5xl md:text-5xl font-bold font-jaro text-gray-900 mb-4">
+              <h2 className="text-5xl md:text-5xl font-bold font-jaro text-black mb-4">
                 Let's Talk
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-black text-lg leading-relaxed">
                 Have a project in mind or just want to say hello? Feel free to reach out. I'd love to hear from you.
               </p>
             </div>
@@ -93,31 +93,31 @@ const Contact = () => {
             {/* Contact Details */}
             <div className="space-y-6 pt-4">
               <div className="flex items-start space-x-4">
-                <FaEnvelope className="text-teal-600 text-xl mt-1 flex-shrink-0" />
+                <FaEnvelope className="text-black text-xl mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                  <a href="mailto:kirthi20156@gmail.com" className="text-gray-600 hover:text-teal-600 transition">
+                  <h3 className="font-semibold text-black mb-1">Email</h3>
+                  <a href="mailto:kirthi20156@gmail.com" className="text-black hover:text-gray-600 transition">
                     kirthishetty20156@gmail.com
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <FaMapMarkerAlt className="text-teal-600 text-xl mt-1 flex-shrink-0" />
+                <FaMapMarkerAlt className="text-black text-xl mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
-                  <p className="text-gray-600">Mumbai, India</p>
+                  <h3 className="font-semibold text-black mb-1">Location</h3>
+                  <p className="text-black">Mumbai, India</p>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
             <div className="pt-4">
-              <h3 className="font-semibold text-gray-900 mb-4">Connect With Me</h3>
+              <h3 className="font-semibold text-black mb-4">Connect With Me</h3>
               <div className="flex space-x-4 text-2xl">
-                <a href="http://www.linkedin.com/in/kirthishetty" aria-label="LinkedIn" className="text-gray-700 hover:text-blue-800 transition">
+                <a href="http://www.linkedin.com/in/kirthishetty" aria-label="LinkedIn" className="text-black hover:text-gray-600 transition">
                   <FaLinkedinIn />
                 </a>
-                <a href="https://github.com/rustyonkeys" aria-label="GitHub" className="text-gray-700 hover:text-black transition">
+                <a href="https://github.com/rustyonkeys" aria-label="GitHub" className="text-black hover:text-gray-600 transition">
                   <FaGithub />
                 </a>
               </div>
@@ -125,10 +125,10 @@ const Contact = () => {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-gray-50 p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+          <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100">
             <div className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-2">
+                <label htmlFor="name" className="block text-sm font-semibold text-black mb-2">
                   Your Name
                 </label>
                 <input
@@ -137,13 +137,13 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition"
                   placeholder="John Doe"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
+                <label htmlFor="email" className="block text-sm font-semibold text-black mb-2">
                   Email Address
                 </label>
                 <input
@@ -152,13 +152,13 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition"
                   placeholder="john@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-semibold text-gray-900 mb-2">
+                <label htmlFor="subject" className="block text-sm font-semibold text-black mb-2">
                   Subject
                 </label>
                 <input
@@ -167,13 +167,13 @@ const Contact = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition"
                   placeholder="Project Inquiry"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-2">
+                <label htmlFor="message" className="block text-sm font-semibold text-black mb-2">
                   Message
                 </label>
                 <textarea
@@ -182,7 +182,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition resize-none"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -190,7 +190,7 @@ const Contact = () => {
               <button
                 onClick={handleSubmit}
                 disabled={loading}
-                className="w-full bg-teal-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-teal-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-black text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Sending...' : 'Send Message'}
               </button>

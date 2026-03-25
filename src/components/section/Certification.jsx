@@ -21,15 +21,15 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="w-full min-h-screen dark:bg-[#121212] text-black dark:text-white flex items-center justify-center px-4 py-12">
+      className="w-full min-h-screen bg-[#F4F4F5] text-black flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-6xl">
-        <h2 className="text-5xl font-bold text-center font-jaro mb-10">Certifications</h2>
+        <h2 className="text-5xl font-bold text-center text-black font-jaro mb-10">Certifications</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {certificates.map((cert, idx) => (
             <div
               key={idx}
-              className="bg-[#1a1a1a] rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.4)] hover:scale-[1.02] transition-transform duration-300"
+              className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:scale-[1.02] transition-transform duration-300"
             >
               <div className="w-full h-64 overflow-hidden rounded-t-2xl">
                 <img
@@ -39,7 +39,7 @@ export default function Certifications() {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-white text-center">{cert.title}</h3>
+                <h3 className="text-lg font-semibold text-black text-center">{cert.title}</h3>
               </div>
             </div>
           ))}

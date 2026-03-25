@@ -47,7 +47,7 @@ export default function Experience() {
   ];
   // bg-[#0E0E10]
   return (
-    <section className="w-full min-h-screen bg-white text-gray-900 px-6 py-24 flex justify-center font-sans">
+    <section className="w-full min-h-screen bg-white text-black px-6 py-24 flex justify-center font-sans">
       <div className="max-w-6xl w-full">
         {/* Main Section Header */}
         <h2 className="text-5xl font-jaro md:text-5xl font-bold mb-20 text-black text-center tracking-tight">
@@ -69,10 +69,10 @@ export default function Experience() {
 
                   {/* Content */}
                   <div className="transition-all duration-300 -mt-2">
-                    <div className="text-sm font-medium text-gray-500 mb-2 font-mono tracking-tight">{edu.duration}</div>
+                    <div className="text-sm font-medium text-black mb-2 font-mono tracking-tight">{edu.duration}</div>
                     <h4 className="text-xl font-medium text-black mb-1 transition-colors">{edu.degree}</h4>
-                    <p className="text-sm text-gray-600 font-medium mb-3">{edu.institution}</p>
-                    <p className="text-sm text-gray-700 leading-relaxed max-w-sm">
+                    <p className="text-sm text-black font-medium mb-3">{edu.institution}</p>
+                    <p className="text-sm text-black leading-relaxed max-w-sm">
                       {edu.description}
                     </p>
                   </div>
@@ -94,16 +94,16 @@ export default function Experience() {
 
                   {/* Content */}
                   <div className="transition-all duration-300 -mt-2">
-                    <div className="text-sm font-medium text-gray-500 mb-2 font-mono tracking-tight">{exp.duration}</div>
+                    <div className="text-sm font-medium text-black mb-2 font-mono tracking-tight">{exp.duration}</div>
                     <h4 className="text-xl font-medium text-black mb-1 transition-colors">{exp.title}</h4>
-                    <p className="text-sm text-gray-600 font-medium mb-4">{exp.company}</p>
+                    <p className="text-sm text-black font-medium mb-4">{exp.company}</p>
 
-                    <div className="text-sm text-gray-700 leading-relaxed mb-5">
+                    <div className="text-sm text-black leading-relaxed mb-5">
                       {Array.isArray(exp.description) ? (
                         <ul className="space-y-2.5 list-none">
                           {exp.description.map((item, i) => (
                             <li key={i} className="flex items-start gap-2.5">
-                              <span className="text-gray-400 mt-1.5 text-[8px]">●</span>
+                              <span className="text-black mt-1.5 text-[8px]">●</span>
                               <span>{item}</span>
                             </li>
                           ))}
@@ -118,7 +118,7 @@ export default function Experience() {
                         {exp.technologies.map((tech, i) => (
                           <span
                             key={i}
-                            className="px-3 py-1 bg-gray-50 text-gray-600 rounded-md text-xs font-medium border border-gray-200 group-hover:bg-gray-100 group-hover:text-gray-900 transition-colors"
+                            className="px-3 py-1 bg-white text-black rounded-md text-xs font-medium border border-black group-hover:bg-white group-hover:text-black transition-colors"
                           >
                             {tech}
                           </span>

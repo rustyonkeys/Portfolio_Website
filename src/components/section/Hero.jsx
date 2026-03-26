@@ -105,7 +105,7 @@ export default function HeroSection() {
           </a>
 
           <a
-            href="/Kirthi Resume.pdf"
+            href="/public/assets/photos/Kirthi Shetty Updated Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-[#1f2937] border-2 border-gray-200 hover:border-gray-300 px-7 py-3.5 rounded-full font-semibold text-[15px] sm:text-[16px] transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"

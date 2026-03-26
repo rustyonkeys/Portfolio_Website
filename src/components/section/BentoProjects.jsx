@@ -234,7 +234,7 @@ export default function BentoProjects() {
       <div className="max-w-7xl mx-auto w-full">
         {/* Header Section */}
         <div className="mb-10">
-          <h2 className="font-jaro text-5xl md:text-[5.5rem] font-semibold tracking-tighter text-black leading-[1.05]">
+          <h2 className="font-jaro text-5xl md:text-[5.5rem] font-semibold tracking-tighter flex justify-center text-black leading-[1.05]">
             My Projects <br className="hidden md:block" />
           </h2>
         </div>

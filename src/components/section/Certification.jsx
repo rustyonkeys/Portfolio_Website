@@ -2,19 +2,19 @@ export default function Certifications() {
   const certificates = [
     {
       title: "Python",
-      image: "public/assets/photos/Python Certificate from Simplilearn-1.png",
+      image: "/assets/photos/python-certificate-from-simplilearn-1.png",
     },
     {
       title: "Data Analysit",
-      image: "public/assets/photos/CertificateOfCompletion_Introduction to Career Skills in Data Analytics-1.png",
+      image: "/assets/photos/certificateofcompletion-introduction to-career-skills-in-data-analytics-1.png",
     },
     {
       title: "AWS",
-      image: "public/assets/photos/aws certificate.jpg",
+      image: "/assets/photos/aws-certificate.jpg",
     },
     {
       title: "Power Bi",
-      image: "public/assets/photos/PowerBI Certificate.jpg",
+      image: "/assets/photos/powerbI-certificate.jpg",
     },
   ];
 
